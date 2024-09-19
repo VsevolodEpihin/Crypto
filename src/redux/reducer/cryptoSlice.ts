@@ -1,6 +1,6 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
-import { CryptoData } from "../../types";
+import { CryptoData } from '../../types';
 
 interface CryptoState {
   selectedCryptos: string[];
@@ -18,9 +18,10 @@ export const cryptoSlice = createSlice({
   reducers: {
     toggleCryptoSelection: (state, action) => {
       const id = action.payload;
+
       if(state.selectedCryptos.includes(id)){
         state.selectedCryptos = state.selectedCryptos.filter(crypto => crypto!==id)
-      }else{
+      }else {
         state.selectedCryptos.push(id)
       }
     },

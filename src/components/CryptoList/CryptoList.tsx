@@ -1,9 +1,9 @@
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 
-import { CryptoData } from "../../types";
-import { RootState } from "../../redux/store";
-import { setCryptoData, toggleCryptoSelection } from "../../redux/reducer/cryptoSlice";
+import { CryptoData } from '../../types';
+import { RootState } from '../../redux/store';
+import { setCryptoData, toggleCryptoSelection } from '../../redux/reducer/cryptoSlice';
 import style from './CryptoList.module.css'
 
 interface CryptoListProps {

@@ -5,3 +5,10 @@ export interface CryptoData {
   price: number;
   priceUsd: string;
 }
+
+export interface CryptoTimeData {
+  [key: string]: {
+    priceUsd: string;
+    time: number;
+  }[]
+}

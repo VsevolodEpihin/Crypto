@@ -5,6 +5,7 @@ import ChartComponent from './components/ChartComponent/ChartComponent'
 import CryptoList from './components/CryptoList/CryptoList'
 import { CryptoData } from './types'
 import { setCryptoData } from './redux/reducer/cryptoSlice'
+import { BASE_URL } from './constants/api'
 
 const App = () => {
   const [cryptos, setCryptos] = useState<CryptoData[]>([]);
@@ -12,7 +13,7 @@ const App = () => {
 
   useEffect(() => {
     const fetchCryptoData = async () => {
-      const response = await fetch('https://api.coincap.io/v2/assets')
+      const response = await fetch(`${BASE_URL}/assets`)
       const data = await response.json();
       setCryptos(data.data);
       dispatch(setCryptoData(data.data))
@@ -31,4 +32,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;
